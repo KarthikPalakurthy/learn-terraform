@@ -40,7 +40,7 @@ variable "sample3" {
 output "sample3" {
   value = var.sample3["string"]
 }
-
+# As default, terraform pulls the data from terraform.tfvars If we need to pull from other file (demo.tfvars), we need to add the file name to the terraform apply -auto-approve -var-file=demo.tfvars
 variable "demo1" {}
 output "demo1" {
   value = var.demo1
