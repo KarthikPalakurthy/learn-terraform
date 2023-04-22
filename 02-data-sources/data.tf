@@ -13,5 +13,5 @@ data "aws_instance" "Public_IP" {
 }
 
 output "Public_IP" {
-  value = data.aws_instance.Public_IP
+  value = data.aws_instance.Public_IP.public_ip
 }
