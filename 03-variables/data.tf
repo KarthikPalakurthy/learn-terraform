@@ -25,6 +25,7 @@ variable "sample2" {
 
 output "sample2" {
   value = var.sample2[2]
+
 }
 
 # Map variable type
