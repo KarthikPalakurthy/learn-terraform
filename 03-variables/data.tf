@@ -40,3 +40,5 @@ variable "sample3" {
 output "sample3" {
   value = var.sample3["string"]
 }
+
+variable "demo1" {}
