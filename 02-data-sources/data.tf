@@ -5,7 +5,7 @@ data "aws_ami" "example" {
 }
 
 output "example" {
-  value = data.aws_ami.example
+  value = data.aws_ami.example.platform_details
 }
 
 data "aws_instance" "Public_IP" {
