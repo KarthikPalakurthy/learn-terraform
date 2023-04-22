@@ -15,3 +15,4 @@ data "aws_instance" "Public_IP" {
 output "Public_IP" {
   value = data.aws_instance.Public_IP.public_ip
 }
+// For more than 1 outputs, we need multiple blocks. Multiple outputs cannot be generated on the same line of code
