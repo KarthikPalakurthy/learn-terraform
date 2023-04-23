@@ -1,10 +1,11 @@
 module "ec2" {
   source = "./ec2"
+ # security_id = ""
 }
 
 module "sg" {
   source = "./sg"
-  security_group_id= module.sg.security_group_id
+  security_id= module.sg.security_group_id
 }
 
 terraform {
