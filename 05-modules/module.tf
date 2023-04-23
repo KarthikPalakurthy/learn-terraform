@@ -1,6 +1,6 @@
 module "ec2" {
   source = "./ec2"
- # security_id = ""
+  security_id = ""
 }
 
 module "sg" {
