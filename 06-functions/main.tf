@@ -14,5 +14,5 @@ data "aws_ami" "centos8" {
 }
 
 output "ami_id" {
-  value = try(aws_instance.web.*.abc, "")
+  value = try(aws_instance.web.*.abc, " Testing the try function ")
 }
