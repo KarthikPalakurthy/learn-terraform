@@ -1,5 +1,5 @@
-resource "aws_security_group" "test_security"{
-  name        = "allow_tls"
+resource "aws_security_group" "test"{
+  name        = "test_security"
   description = "Allow TLS inbound traffic"
 
   ingress {
@@ -24,5 +24,5 @@ resource "aws_security_group" "test_security"{
 }
 
 output "security_id" {
-  value = aws_security_group.test_security.id
+  value = aws_security_group.test.id
 }
