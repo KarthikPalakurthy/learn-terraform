@@ -23,6 +23,6 @@ resource "aws_security_group" "test_security"{
   }
 }
 
-output "security_group_id" {
+output "security_id" {
   value = aws_security_group.test_security.id
 }
