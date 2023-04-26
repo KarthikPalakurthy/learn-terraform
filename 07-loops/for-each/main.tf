@@ -31,3 +31,7 @@ variable "components" {
     }
   }
 }
+
+output "name" {
+  value = aws_instance.web
+}
