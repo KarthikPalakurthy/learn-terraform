@@ -18,20 +18,21 @@ data "aws_ami" "centos8" {
 variable "components" {
   default = {
     frontend = {
-      name = "frontend"
+      name = "frontend",
       instance_type= "t3.micro"
     }
     cart = {
-      name = "cart"
+      name = "cart",
       instance_type= "t3.large"
     }
     catalogue = {
-      name = "catalogue"
+      name = "catalogue",
       instance_type= "t3.small"
     }
   }
 }
 
 output "name" {
-  value = aws_instance.web
-}
+  value = {
+    for k, v in aws_instance.web : k => v.public_ip
+  }}
