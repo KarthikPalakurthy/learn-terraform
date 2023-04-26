@@ -1,15 +1,15 @@
 variable "components" {
   default = {
     frontend = {
-      name = "frontend",
+      Name = "frontend",
       instance_type= "t3.micro"
     }
     cart = {
-      name = "cart",
+      Name = "cart",
       instance_type= "t3.large"
     }
     catalogue = {
-      name = "catalogue",
+      Name = "catalogue",
       instance_type= "t3.small"
     }
   }
@@ -19,5 +19,5 @@ module "ec2" {
   source = "./module"
   for_each = var.components
   instance_type=each.value.instance_type
-  name= each.value.name
+  name= each.value.Name
 }
