@@ -2,10 +2,10 @@ resource "aws_instance" "web" {
   #We use count to create multiple loops and it can be controlled by using length of a variable.
   for_each = var.components
   ami = data.aws_ami.centos8.id
-  instance_type = var.components["instance_type"]
+  instance_type = each.value["instance_type"]
 
   tags = {
-    name = var.components["name"]
+    name = each.value["name"]
   }
 }
 
