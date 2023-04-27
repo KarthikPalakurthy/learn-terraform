@@ -5,6 +5,7 @@ provider "aws" {
 resource "aws_instance" "web" {
   ami = data.aws_ami.centos8.id
   instance_type = "t3.micro"
+  vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
   tags = {
     Name = "test-machine"
@@ -17,7 +18,7 @@ data "aws_ami" "centos8" {
   owners      = ["973714476881"]
 }
 
-resource "null_resource" "aws" {
+resource "null_resource" "provision" {
   provisioner "remote-exec" {
     connection {
       user     = "centos"
