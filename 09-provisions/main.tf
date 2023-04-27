@@ -19,6 +19,11 @@ data "aws_ami" "centos8" {
 }
 
 resource "null_resource" "provision" {
+
+  triggers = {
+    instance_id = aws_instance.web.id
+  }
+
   provisioner "remote-exec" {
     connection {
       user     = "centos"
