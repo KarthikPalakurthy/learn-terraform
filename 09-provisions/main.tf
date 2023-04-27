@@ -20,7 +20,6 @@ data "aws_ami" "centos8" {
 resource "null_resource" "aws" {
   provisioner "remote-exec" {
     connection {
-      type     = "ssh"
       user     = "centos"
       password = "DevOps321"
       host     = aws_instance.web.public_ip
