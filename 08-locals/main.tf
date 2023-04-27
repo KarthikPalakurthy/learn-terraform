@@ -1,10 +1,10 @@
 variable "component" {
   default   = {
-    cart   = {
+    Instance1   = {
       name          = "cart"
       instance_type = "t3.micro"
   }
-    Catalogue = {
+    Instance2 = {
       name          = "Catalogue"
       instance_type = "t3.small"
     }
